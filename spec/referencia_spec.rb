@@ -37,26 +37,66 @@ describe Referencia do
 
           
       context "Herencia" do
-
+      it "Comprobar es una revista es una referencia" do
+        expect(@referencia5.is_a?Bibliografia).to eq(true)
+      end
+      
+      it "herencia en un objeto lista" do
+        expect(@lista.is_a?Object).to eq(true)
       end
       
       
       context "Comparable" do
 
+        it "La Referencia del Autor David Chelismsky es mayor que la de David Flanagan" do
+          expect(@referencia3 > @referencia4).to eq(true)
+        end
+        
+        it "La Referencia del Autor David Chelismsky es menor que la de David Flanagan" do
+          expect(@referencia3 < @referencia4).to eq(false)
+        end
+        
+        it "La Referencia Richard E. Silverman es menor que la David Chelimsky" do
+          expect(@referencia5 < @referencia4).to eq(false)
+        end
+        
+        it "La Referencia Richard E. Silverman es mayor que la David Chelimsky" do
+          expect(@referencia5 > @referencia4).to eq(true)
+        end
       
       end
       
-      context "Enumerable" do
-
+        context "Enumerable" do
+          before :each do
+            @lista2 = ListaDoble.new()
+            @lista2.add_many([8,7,17,32,47,2,3])
+          end
+    
+          it "Comprobando maximo" do
+            expect(@lista2.max).to eq(47)
+          end
+          
+           it "Comprobando minimo" do
+            expect(@lista2.min).to eq(2)
+          end
+          
+          it "Numero de elementos" do
+            expect(@lista2.count).to eq(7)
+          end
+          
+          it "Ordenacion de la lista" do
+            expect(@lista2.sort).to eq([2,3,7,8,17,32,47])
+          end
           
           
-      end
+        end
       
 
       
     
     
-  
+    
+    end
     
     
 
