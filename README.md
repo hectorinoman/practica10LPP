@@ -1,5 +1,6 @@
 # Integracion Continua
 [![Build Status](https://travis-ci.org/hectorinoman/practica9LPP.svg)](https://travis-ci.org/hectorinoman/practica9LPP)
+[![Coverage Status](https://coveralls.io/repos/hectorinoman/practica10LPP/badge.svg?branch=master&service=github)](https://coveralls.io/github/hectorinoman/practica10LPP?branch=master)
 
 # Referencia
 
